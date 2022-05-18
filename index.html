@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/549b418df6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Lane Suzart</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="./assets/images/logo.png"
+          width="140px"
+          alt="Letras LS na cor branca com fundo lilás, e abaixo Lane Suzart"
+        />
+      </div>
+      <ul>
+        <li>
+          <a target="_blank" href="https://github.com/lannisuzart/">GitHub</a>
+        </li>
+
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/lane-suzart/"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section class="container">
+        <div class="name">
+          <h1>Lane Suzart</h1>
+          <h5>Aprendiz de Dev</h5>
+        </div>
+
+        <div onclick="displayAbout()" id="arrow">
+          <i id="animation" class="fa-solid fa-shield-heart"></i>
+        </div>
+
+        <div style="display: none" id="about">
+          <p>Uma simples garota tentando aprender o máximo possível!</p>
+        </div>
+
+        <div class="form">
+          <div>
+            <p>Deixe uma mensagem e seu contato!</p>
+          </div>
+          <form
+            action="https://formsubmit.co/fc4afe99179ee49a6049922272c5f250"
+            method="POST"
+          >
+            <textarea
+              type="text"
+              name="message"
+              cols="50"
+              rows="6"
+              placeholder="Mensagem para Lane"
+              required
+            ></textarea>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Seu melhor e-mail :D"
+                required
+              />
+
+              <input
+                type="hidden"
+                name="_next"
+                value="http://lannisuzart.github.io/thank-you.html"
+              />
+              <button type="submit">Enviar!</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function displayAbout() {
+        var arrow = document.getElementById("animation");
+        arrow.classList.toggle("rotate");
+        var display = document.getElementById("about");
+        display.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
